@@ -333,7 +333,24 @@
       <Pane prefHeight="800.0" prefWidth="350.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b8ebe9" height="819.0" layoutX="-8.0" layoutY="-7.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="5.0" width="358.0" />
-            <ComboBox fx:id="year_list" layoutX="89.0" layoutY="116.0" onAction="#list_Action" prefWidth="150.0" promptText="2017" />
+            <ComboBox fx:id="year_list" layoutX="96.0" layoutY="88.0" onAction="#list_Action" prefWidth="150.0" promptText="2017" />
+            <Label fx:id="month_label" alignment="CENTER" contentDisplay="CENTER" layoutX="93.0" layoutY="157.0" prefHeight="47.0" prefWidth="165.0" text="January" textAlignment="CENTER" textFill="#656161">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Button layoutX="100.0" layoutY="219.0" mnemonicParsing="false" onAction="#janBtn" prefHeight="39.0" prefWidth="150.0" text="January" />
+            <Button layoutX="100.0" layoutY="264.0" mnemonicParsing="false" onAction="#febBtn" prefHeight="39.0" prefWidth="150.0" text="February" />
+            <Button layoutX="100.0" layoutY="311.0" mnemonicParsing="false" onAction="#marBtn" prefHeight="39.0" prefWidth="150.0" text="March" />
+            <Button layoutX="100.0" layoutY="356.0" mnemonicParsing="false" onAction="#aprBtn" prefHeight="39.0" prefWidth="150.0" text="April" />
+            <Button layoutX="100.0" layoutY="403.0" mnemonicParsing="false" onAction="#mayBtn" prefHeight="39.0" prefWidth="150.0" text="May" />
+            <Button layoutX="100.0" layoutY="449.0" mnemonicParsing="false" onAction="#junBtn" prefHeight="39.0" prefWidth="150.0" text="June" />
+            <Button fx:id="julBtn" layoutX="100.0" layoutY="497.0" mnemonicParsing="false" onAction="#julBtn" prefHeight="39.0" prefWidth="150.0" text="July" />
+            <Button layoutX="100.0" layoutY="543.0" mnemonicParsing="false" onAction="#augBtn" prefHeight="39.0" prefWidth="150.0" text="August" />
+            <Button layoutX="100.0" layoutY="589.0" mnemonicParsing="false" onAction="#sepBtn" prefHeight="39.0" prefWidth="150.0" text="September" />
+            <Button layoutX="100.0" layoutY="633.0" mnemonicParsing="false" onAction="#octBtn" prefHeight="39.0" prefWidth="150.0" text="October" />
+            <Button layoutX="100.0" layoutY="678.0" mnemonicParsing="false" onAction="#novBtn" prefHeight="39.0" prefWidth="150.0" text="November" />
+            <Button layoutX="100.0" layoutY="724.0" mnemonicParsing="false" onAction="#decBtn" prefHeight="39.0" prefWidth="150.0" text="December" />
          </children>
       </Pane>
    </children>

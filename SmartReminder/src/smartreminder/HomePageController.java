@@ -12,6 +12,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
@@ -195,20 +196,98 @@ public class HomePageController implements Initializable {
     @FXML
     private ComboBox year_list;
     
-    private static String year;  
+    private static String year;
+    private static int month;  
     ObservableList<String> list = FXCollections.observableArrayList("2017","2018");
+    @FXML
+    private Button julBtn;
+    @FXML
+    private Label month_label;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO    
-         year_list.setItems(list);     
+         year_list.setItems(list);  
+        // year_list.setValue("2018");
     }
 
     @FXML
     private void list_Action(ActionEvent event) {
-        //year = 
+        year = year_list.getValue().toString();
         System.out.println(year);
     }
+
+    @FXML
+    private void janBtn(ActionEvent event) {
+        month = 1;
+        month_label.setText("January");
+    }
+
+    @FXML
+    private void febBtn(ActionEvent event) {
+        month = 2;
+        month_label.setText("February");
+    }
+
+    @FXML
+    private void marBtn(ActionEvent event) {
+        month = 3;
+        month_label.setText("March"); 
+    }
+
+    @FXML
+    private void aprBtn(ActionEvent event) {
+        month = 4;
+        month_label.setText("April");
+    }
+
+    @FXML
+    private void mayBtn(ActionEvent event) {
+        month = 5;
+        month_label.setText("May");
+    }
+
+    @FXML
+    private void junBtn(ActionEvent event) {
+        month = 6;
+        month_label.setText("June");
+    }
+
+    @FXML
+    private void julBtn(ActionEvent event) {
+        month = 7;
+        month_label.setText("July");
+    }
+    @FXML
+    private void augBtn(ActionEvent event) {
+        month = 8;
+        month_label.setText("August");
+    }
+
+    @FXML
+    private void sepBtn(ActionEvent event) {
+        month = 9;
+        month_label.setText("September");
+    }
+
+    @FXML
+    private void octBtn(ActionEvent event) {
+        month = 10;
+        month_label.setText("October");
+    }
+
+    @FXML
+    private void novBtn(ActionEvent event) {
+        month = 11;
+        month_label.setText("November");
+    }
+
+    @FXML
+    private void decBtn(ActionEvent event) {
+        month = 12;
+        month_label.setText("December");
+    }
+
 }
