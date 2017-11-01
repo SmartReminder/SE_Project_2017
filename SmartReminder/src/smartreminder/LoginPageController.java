@@ -38,10 +38,10 @@ public class LoginPageController implements Initializable {
 
     @FXML
     private void click(ActionEvent event) {
-       SmartReminder.primaryStage.getScene().setRoot(SmartReminder.homePage);
+      // SmartReminder.primaryStage.getScene().setRoot(SmartReminder.homePage);
         
-        /*SmartReminder.primaryPane.getChildren().clear();
-        SmartReminder.primaryPane.getChildren().add(SmartReminder.loginForm);*/
+        SmartReminder.primaryPane.getChildren().clear();
+        SmartReminder.primaryPane.getChildren().add(SmartReminder.loginForm);
     }
 
 
