@@ -7,7 +7,15 @@ package smartreminder;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.MenuButton;
+import javafx.scene.shape.Rectangle;
 
 /**
  * FXML Controller class
@@ -16,12 +24,191 @@ import javafx.fxml.Initializable;
  */
 public class HomePageController implements Initializable {
 
+    @FXML
+    private Rectangle dayBlock1;
+    @FXML
+    private Rectangle dayBlock2;
+    @FXML
+    private Rectangle dayBlock3;
+    @FXML
+    private Rectangle dayBlock4;
+    @FXML
+    private Rectangle dayBlock5;
+    @FXML
+    private Rectangle dayBlock6;
+    @FXML
+    private Rectangle dayBlock7;
+    @FXML
+    private Rectangle dayBlock8;
+    @FXML
+    private Rectangle dayBlock9;
+    @FXML
+    private Rectangle dayBlock10;
+    @FXML
+    private Rectangle dayBlock11;
+    @FXML
+    private Rectangle dayBlock12;
+    @FXML
+    private Rectangle dayBlock13;
+    @FXML
+    private Rectangle dayBlock14;
+    @FXML
+    private Rectangle dayBlock15;
+    @FXML
+    private Rectangle dayBlock16;
+    @FXML
+    private Rectangle dayBlock17;
+    @FXML
+    private Rectangle dayBlock18;
+    @FXML
+    private Rectangle dayBlock19;
+    @FXML
+    private Rectangle dayBlock20;
+    @FXML
+    private Rectangle dayBlock21;
+    @FXML
+    private Rectangle dayBlock22;
+    @FXML
+    private Rectangle dayBlock23;
+    @FXML
+    private Rectangle dayBlock24;
+    @FXML
+    private Rectangle dayBlock25;
+    @FXML
+    private Rectangle dayBlock26;
+    @FXML
+    private Rectangle dayBlock27;
+    @FXML
+    private Rectangle dayBlock28;
+    @FXML
+    private Rectangle dayBlock29;
+    @FXML
+    private Rectangle dayBlock30;
+    @FXML
+    private Rectangle dayBlock31;
+    @FXML
+    private Rectangle dayBlock32;
+    @FXML
+    private Rectangle dayBlock33;
+    @FXML
+    private Rectangle dayBlock34;
+    @FXML
+    private Rectangle dayBlock35;
+    @FXML
+    private Rectangle dayBlock36;
+    @FXML
+    private Rectangle dayBlock37;
+    @FXML
+    private Rectangle dayBlock38;
+    @FXML
+    private Rectangle dayBlock39;
+    @FXML
+    private Rectangle dayBlock40;
+    @FXML
+    private Rectangle dayBlock41;
+    @FXML
+    private Rectangle dayBlock42;
+    @FXML
+    private Label dayLabel1;
+    @FXML
+    private Label dayLabel2;
+    @FXML
+    private Label dayLabel3;
+    @FXML
+    private Label dayLabel4;
+    @FXML
+    private Label dayLabel5;
+    @FXML
+    private Label dayLabel6;
+    @FXML
+    private Label dayLabel7;
+    @FXML
+    private Label dayLabel8;
+    @FXML
+    private Label dayLabel9;
+    @FXML
+    private Label dayLabel10;
+    @FXML
+    private Label dayLabel11;
+    @FXML
+    private Label dayLabel12;
+    @FXML
+    private Label dayLabel13;
+    @FXML
+    private Label dayLabel14;
+    @FXML
+    private Label dayLabel15;
+    @FXML
+    private Label dayLabel16;
+    @FXML
+    private Label dayLabel17;
+    @FXML
+    private Label dayLabel18;
+    @FXML
+    private Label dayLabel19;
+    @FXML
+    private Label dayLabel20;
+    @FXML
+    private Label dayLabel21;
+    @FXML
+    private Label dayLabel22;
+    @FXML
+    private Label dayLabel23;
+    @FXML
+    private Label dayLabel24;
+    @FXML
+    private Label dayLabel25;
+    @FXML
+    private Label dayLabel26;
+    @FXML
+    private Label dayLabel27;
+    @FXML
+    private Label dayLabel28;
+    @FXML
+    private Label dayLabel29;
+    @FXML
+    private Label dayLabel30;
+    @FXML
+    private Label dayLabel31;
+    @FXML
+    private Label dayLabel32;
+    @FXML
+    private Label dayLabel33;
+    @FXML
+    private Label dayLabel34;
+    @FXML
+    private Label dayLabel35;
+    @FXML
+    private Label dayLabel36;
+    @FXML
+    private Label dayLabel38;
+    @FXML
+    private Label dayLabel37;
+    @FXML
+    private Label dayLabel39;
+    @FXML
+    private Label dayLabel40;
+    @FXML
+    private Label dayLabel41;
+    @FXML
+    private Label dayLabel42;
+    @FXML
+    private ComboBox year_list;
+    
+    private static String year;  
+    ObservableList<String> list = FXCollections.observableArrayList("2017","2018");
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
-    
+        // TODO    
+         year_list.setItems(list);     
+    }
+
+    @FXML
+    private void list_Action(ActionEvent event) {
+        //year = 
+        System.out.println(year);
+    }
 }
