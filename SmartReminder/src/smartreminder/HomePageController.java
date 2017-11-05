@@ -34,6 +34,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.scene.Node;
 import javafx.scene.layout.GridPane;
+import static javafx.scene.layout.GridPane.getColumnIndex;
 import javafx.scene.paint.Color;
 
 /**
@@ -236,12 +237,12 @@ public class HomePageController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO    
-        //by chattamet
-         Calendar c = Calendar.getInstance();
+        Calendar c = Calendar.getInstance();
         month = c.get(Calendar.MONTH);
         String defaultMonth = new DateFormatSymbols().getMonths()[month];
         generateCalendar(month,year);
         month_label.setText(defaultMonth);
+         year_list.setItems(list);  
     }
     
     
@@ -343,8 +344,6 @@ public class HomePageController implements Initializable {
    void generateCalendar(int month,int year){
         int count_day = 1;
         int rectangle_loop = 1;
-         year_list.setItems(list);  
-         year_list.setValue(year);
          //month in Calendar class start at 0(0 = january) 
          Calendar c = Calendar.getInstance();
          c.set(year, month, 1);
@@ -378,6 +377,8 @@ public class HomePageController implements Initializable {
                     }
                     else if(count_day < daysInMonth+day_of_week)
                     {
+                        String x = child.getTypeSelector();
+                        System.out.println(x);
                        dayBlock[count_day-1].setFill(Color.WHITE);
                        dayLabel[count_day-1].setText(String.valueOf(day++));
                        day = (day-1==daysInMonth) ? 1 : day;
