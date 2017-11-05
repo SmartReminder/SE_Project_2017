@@ -23,6 +23,9 @@ public class SmartReminder extends Application {
     public static Parent errorLogin;
     public static Parent loginForm;
     public static Parent profilePage;
+    public static Parent groupPage;
+    
+    
     public static Stage primaryStage;
     public static Pane primaryPane;
     public static Pane secondaryPane;
@@ -34,6 +37,7 @@ public class SmartReminder extends Application {
         homePage = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
         errorLogin = FXMLLoader.load(getClass().getResource("ErrorLogin.fxml"));
         loginForm = FXMLLoader.load(getClass().getResource("FillIdPassword.fxml"));
+        groupPage = FXMLLoader.load(getClass().getResource("GroupPage.fxml"));
         
         Scene scene = new Scene(loginPage);
         primaryStage.setScene(scene);

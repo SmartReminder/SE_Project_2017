@@ -14,6 +14,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
+import static smartreminder.FillIdPasswordController.username;
 
 /**
  * FXML Controller class
@@ -24,6 +25,7 @@ public class ProfilePageController implements Initializable {
 
     @FXML
     private Circle imageProfile;
+    static public Circle imageProfileTemp;
     @FXML
     private ImageView imageView;
     //Image img;
@@ -51,14 +53,24 @@ public class ProfilePageController implements Initializable {
  
         imageViewTemp = imageView;
         username_Temp = username_label;
+        imageProfileTemp = imageProfile;
         setInit();
-        imageProfile.setFill(new ImagePattern(img));
         
     }   
     static void setInit()
-    {
-        img = imageViewTemp.getImage();
+    {   
         username =  FillIdPasswordController.username;  
+        img = imageViewTemp.getImage();
+        if(username.equals("moira"))
+        {
+            img = new Image("file:src/Image/moira.jpg");
+        }
+        else if(username.equals("umaru"))
+        {
+            img = new Image("file:src/Image/umaru.jpg");
+        }
+ 
+        imageProfileTemp.setFill(new ImagePattern(img));
         username_Temp.setText(username);
     }
      

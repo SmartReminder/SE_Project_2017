@@ -28,6 +28,7 @@ import java.util.Calendar;
 
 
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.ListView;
 import javafx.scene.control.Menu;
@@ -56,7 +57,7 @@ public class HomePageController implements Initializable {
     ObservableList<String> list = FXCollections.observableArrayList("2017","2018");
     ObservableList<String> list2 = FXCollections.observableArrayList("January","February","March","April","May","June","July","August","September","October","November","December");
     // friendList_name load form database
-    ObservableList<String> friendList_name =FXCollections.observableArrayList ("ShinAh", "JaeHa","Sesshomaru", "Kaneki","Tatsuya", "Miyuki"); 
+    static ObservableList<String> friendList_name =FXCollections.observableArrayList ("ShinAh", "JaeHa","Sesshomaru", "Kaneki","Tatsuya", "Miyuki"); 
     private Label month_label;
     @FXML
     private GridPane calendarPane;
@@ -414,13 +415,17 @@ public class HomePageController implements Initializable {
     private void cancleDelete(ActionEvent event) {
         deleteFriend_pane.setVisible(false);
     }
-
-    @FXML
-    private void profileMenu(ActionEvent event) {
-        SmartReminder.secondaryPane.getChildren().add(SmartReminder.profilePage);
-        ProfilePageController.setInit();
+    void setPane(Parent page)
+    {
+        SmartReminder.secondaryPane.getChildren().clear();
         selectCal_Pane.setVisible(false);
         friendListPane.setVisible(false);
+        SmartReminder.secondaryPane.getChildren().add(page);
+    }
+    @FXML
+    private void profileMenu(ActionEvent event) {
+        setPane(SmartReminder.profilePage); 
+        ProfilePageController.setInit();     
     }
 
     @FXML
@@ -428,6 +433,11 @@ public class HomePageController implements Initializable {
         SmartReminder.secondaryPane.getChildren().clear();
         selectCal_Pane.setVisible(true);
         friendListPane.setVisible(true);
+    }
+
+    @FXML
+    private void groupMenu(ActionEvent event) {
+        setPane(SmartReminder.groupPage); 
     }
 
 }

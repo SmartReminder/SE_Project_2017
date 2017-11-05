@@ -20,7 +20,7 @@
                 <Menu mnemonicParsing="false" text="Feature">
                   <items>
                     <MenuItem mnemonicParsing="false" onAction="#personalMenu" text="Personal" />
-                        <MenuItem mnemonicParsing="false" text="Group" />
+                        <MenuItem mnemonicParsing="false" onAction="#groupMenu" text="Group" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Edit">

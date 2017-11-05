@@ -25,7 +25,7 @@ public class FillIdPasswordController implements Initializable {
     @FXML
     private PasswordField password_field;
     
-    public static String username;   
+    public static String username="";   
     public static String password;
     static public TextField changeid_field;
     static public PasswordField changpassword_field;
