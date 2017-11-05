@@ -22,12 +22,15 @@ public class SmartReminder extends Application {
     public static Parent homePage;
     public static Parent errorLogin;
     public static Parent loginForm;
+    public static Parent profilePage;
     public static Stage primaryStage;
     public static Pane primaryPane;
+    public static Pane secondaryPane;
     @Override
     public void start(Stage stage) throws Exception {
         primaryStage = stage;
         loginPage = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
+        profilePage = FXMLLoader.load(getClass().getResource("ProfilePage.fxml"));
         homePage = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
         errorLogin = FXMLLoader.load(getClass().getResource("ErrorLogin.fxml"));
         loginForm = FXMLLoader.load(getClass().getResource("FillIdPassword.fxml"));

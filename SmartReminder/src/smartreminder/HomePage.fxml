@@ -19,7 +19,7 @@
               <menus>
                 <Menu mnemonicParsing="false" text="Feature">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Personal" />
+                    <MenuItem mnemonicParsing="false" onAction="#personalMenu" text="Personal" />
                         <MenuItem mnemonicParsing="false" text="Group" />
                   </items>
                 </Menu>
@@ -42,7 +42,7 @@
               <menus>
                 <Menu fx:id="username_menu" mnemonicParsing="false" text="Username">
                   <items>
-                        <MenuItem mnemonicParsing="false" text="Profile" />
+                        <MenuItem mnemonicParsing="false" onAction="#profileMenu" text="Profile" />
                     <MenuItem mnemonicParsing="false" onAction="#signOut" text="Log out" />
                   </items>
                 </Menu>
@@ -53,7 +53,7 @@
             </MenuBar>
             <Label fx:id="label_Today" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="41.0" prefHeight="47.0" prefWidth="794.0" text="Today is 16 / 08 / 2018" textAlignment="CENTER" textFill="#656161">
                <font>
-                  <Font size="32.0" />
+                  <Font name="Tw Cen MT" size="32.0" />
                </font>
             </Label>
          </children>
@@ -379,87 +379,84 @@
             </Circle>
          </children>
       </GridPane>
-      <Pane layoutX="4.0" layoutY="-4.0" prefHeight="800.0" prefWidth="350.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b8ebe9" height="800.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" width="358.0" />
+      <Pane fx:id="main_pane" layoutX="4.0" layoutY="-4.0" prefHeight="800.0" prefWidth="350.0" />
+      <Pane fx:id="selectCal_Pane" prefHeight="258.0" prefWidth="350.0">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b8ebe9" height="800.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" width="358.0" />
-            <Pane fx:id="selectCal_Pane" prefHeight="258.0" prefWidth="350.0">
+            <ComboBox fx:id="year_list" layoutX="85.0" layoutY="90.0" onAction="#list_Action" prefHeight="31.0" prefWidth="178.0" promptText="2017">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="88.0" layoutY="121.0" prefHeight="47.0" prefWidth="178.0" text="Month" textAlignment="CENTER" textFill="#656161">
+               <font>
+                  <Font name="Tw Cen MT Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="43.0" prefHeight="47.0" prefWidth="178.0" text="Year" textAlignment="CENTER" textFill="#656161">
+               <font>
+                  <Font name="Tw Cen MT Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="193.0" prefHeight="47.0" prefWidth="314.0" text="_____________________" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="month_list" layoutX="87.0" layoutY="168.0" onAction="#mlist_Action" prefHeight="31.0" prefWidth="178.0" promptText="2017">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+         </children>
+      </Pane>
+      <Pane fx:id="friendListPane" layoutY="250.0" prefHeight="552.0" prefWidth="360.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="-3.0" prefHeight="47.0" prefWidth="192.0" text="Friends List" textAlignment="CENTER" textFill="#656161">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <ListView fx:id="friend_list" layoutX="85.0" layoutY="40.0" onMouseClicked="#dubbleClickedFriendList" prefHeight="152.0" prefWidth="192.0" />
+            <TextField fx:id="idFriend_field" layoutX="57.0" layoutY="239.0" prefHeight="31.0" prefWidth="192.0" promptText="Username" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="192.0" prefHeight="47.0" prefWidth="192.0" text="Add Friend" textAlignment="CENTER" textFill="#656161">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Button layoutX="252.0" layoutY="239.0" mnemonicParsing="false" onAction="#addFriend" prefHeight="31.0" prefWidth="62.0" text="Add">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="24.0" layoutY="269.0" prefHeight="47.0" prefWidth="314.0" text="_____________________" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Pane fx:id="deleteFriend_pane" layoutX="77.0" layoutY="47.0" prefHeight="138.0" prefWidth="208.0" visible="false">
                <children>
-                  <ComboBox fx:id="year_list" layoutX="85.0" layoutY="90.0" onAction="#list_Action" prefHeight="31.0" prefWidth="178.0" promptText="2017">
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ComboBox>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="88.0" layoutY="121.0" prefHeight="47.0" prefWidth="178.0" text="Month" textAlignment="CENTER" textFill="#656161">
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5575d" height="130.0" layoutX="-10.0" layoutY="3.0" stroke="BLACK" strokeType="INSIDE" width="227.0" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="3.0" prefHeight="47.0" prefWidth="178.0" text="Want to Delete ?" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="43.0" prefHeight="47.0" prefWidth="178.0" text="Year" textAlignment="CENTER" textFill="#656161">
-                     <font>
-                        <Font size="22.0" />
-                     </font>
-                  </Label>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="193.0" prefHeight="47.0" prefWidth="314.0" text="_____________________" textAlignment="CENTER" textFill="WHITE">
-                     <font>
-                        <Font size="32.0" />
-                     </font>
-                  </Label>
-                  <ComboBox fx:id="month_list" layoutX="87.0" layoutY="168.0" onAction="#mlist_Action" prefHeight="31.0" prefWidth="178.0" promptText="2017">
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ComboBox>
-               </children>
-            </Pane>
-            <Pane fx:id="controlPane" layoutX="-1.0" layoutY="241.0" prefHeight="552.0" prefWidth="360.0">
-               <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" prefHeight="47.0" prefWidth="192.0" text="Friends List" textAlignment="CENTER" textFill="#656161">
-                     <font>
-                        <Font size="22.0" />
-                     </font>
-                  </Label>
-                  <ListView fx:id="friend_list" layoutX="85.0" layoutY="40.0" onMouseClicked="#dubbleClickedFriendList" prefHeight="152.0" prefWidth="192.0" />
-                  <TextField fx:id="idFriend_field" layoutX="57.0" layoutY="239.0" prefHeight="31.0" prefWidth="192.0" promptText="Username" />
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="192.0" prefHeight="47.0" prefWidth="192.0" text="Add Friend" textAlignment="CENTER" textFill="#656161">
-                     <font>
-                        <Font size="22.0" />
-                     </font>
-                  </Label>
-                  <Button layoutX="252.0" layoutY="239.0" mnemonicParsing="false" onAction="#addFriend" prefHeight="31.0" prefWidth="62.0" text="Add">
+                  <Button layoutX="15.0" layoutY="93.0" mnemonicParsing="false" onAction="#deleteFriend" prefHeight="31.0" prefWidth="62.0" text="Yes">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="24.0" layoutY="269.0" prefHeight="47.0" prefWidth="314.0" text="_____________________" textAlignment="CENTER" textFill="WHITE">
+                  <Button layoutX="131.0" layoutY="93.0" mnemonicParsing="false" onAction="#cancleDelete" prefHeight="31.0" prefWidth="62.0" text="No">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label fx:id="nameDelete_label" alignment="CENTER" contentDisplay="CENTER" layoutX="16.0" layoutY="45.0" prefHeight="40.0" prefWidth="178.0" text="Baka" textAlignment="CENTER">
                      <font>
-                        <Font size="32.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
-                  <Pane fx:id="deleteFriend_pane" layoutX="77.0" layoutY="47.0" prefHeight="138.0" prefWidth="208.0" visible="false">
-                     <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5575d" height="130.0" layoutX="-10.0" layoutY="3.0" stroke="BLACK" strokeType="INSIDE" width="227.0" />
-                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="3.0" prefHeight="47.0" prefWidth="178.0" text="Want to Delete ?" textAlignment="CENTER" textFill="WHITE">
-                           <font>
-                              <Font size="22.0" />
-                           </font>
-                        </Label>
-                        <Button layoutX="15.0" layoutY="93.0" mnemonicParsing="false" onAction="#deleteFriend" prefHeight="31.0" prefWidth="62.0" text="Yes">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                        <Button layoutX="131.0" layoutY="93.0" mnemonicParsing="false" onAction="#cancleDelete" prefHeight="31.0" prefWidth="62.0" text="No">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                        <Label fx:id="nameDelete_label" alignment="CENTER" contentDisplay="CENTER" layoutX="16.0" layoutY="45.0" prefHeight="40.0" prefWidth="178.0" text="Baka" textAlignment="CENTER">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </Pane>
                </children>
             </Pane>
          </children>

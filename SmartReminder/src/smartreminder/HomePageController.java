@@ -68,8 +68,7 @@ public class HomePageController implements Initializable {
     int current_month;
     int current_year;
     String monthName;
-    @FXML
-    private Pane controlPane;
+   
     @FXML
     private Circle mark_day;
     @FXML
@@ -247,16 +246,20 @@ public class HomePageController implements Initializable {
     private Menu username_menu;
     static public  Menu changeUsername;
     @FXML
-    private Pane selectCal_Pane;
-    @FXML
     private ListView<String> friend_list;
     @FXML
     private TextField idFriend_field;
     @FXML
-    private Pane deleteFriend_pane;
-    @FXML
     private Label nameDelete_label;
     String select_Friendname;
+    @FXML
+    private Pane main_pane;
+    @FXML
+    private Pane selectCal_Pane;
+    @FXML
+    private Pane deleteFriend_pane;
+    @FXML
+    private Pane friendListPane;
  
     /**
      * Initializes the controller class.
@@ -266,6 +269,7 @@ public class HomePageController implements Initializable {
         year_list.setItems(list); 
         month_list.setItems(list2); 
         changeUsername =  username_menu;
+        SmartReminder.secondaryPane = main_pane;
         setInit();      
          
     }
@@ -368,6 +372,9 @@ public class HomePageController implements Initializable {
         setInit();
         FillIdPasswordController.changeid_field.setText("");
         FillIdPasswordController.changpassword_field.setText("");
+        SmartReminder.secondaryPane.getChildren().clear();
+        selectCal_Pane.setVisible(true);
+        friendListPane.setVisible(true);
         SmartReminder.primaryStage.getScene().setRoot(SmartReminder.loginPage);
        
     }
@@ -406,6 +413,21 @@ public class HomePageController implements Initializable {
     @FXML
     private void cancleDelete(ActionEvent event) {
         deleteFriend_pane.setVisible(false);
+    }
+
+    @FXML
+    private void profileMenu(ActionEvent event) {
+        SmartReminder.secondaryPane.getChildren().add(SmartReminder.profilePage);
+        ProfilePageController.setInit();
+        selectCal_Pane.setVisible(false);
+        friendListPane.setVisible(false);
+    }
+
+    @FXML
+    private void personalMenu(ActionEvent event) {
+        SmartReminder.secondaryPane.getChildren().clear();
+        selectCal_Pane.setVisible(true);
+        friendListPane.setVisible(true);
     }
 
 }
