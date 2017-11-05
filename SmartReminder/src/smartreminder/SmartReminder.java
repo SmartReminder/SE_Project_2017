@@ -30,7 +30,7 @@ public class SmartReminder extends Application {
         loginPage = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
         homePage = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
         errorLogin = FXMLLoader.load(getClass().getResource("ErrorLogin.fxml"));
-        loginForm = FXMLLoader.load(getClass().getResource("LoginForm.fxml"));
+        loginForm = FXMLLoader.load(getClass().getResource("FillIdPassword.fxml"));
         
         Scene scene = new Scene(loginPage);
         primaryStage.setScene(scene);

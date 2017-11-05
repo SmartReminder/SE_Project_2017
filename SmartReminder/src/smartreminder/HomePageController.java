@@ -5,37 +5,39 @@
  */
 package smartreminder;
 
-import java.awt.Paint;
+
 import java.net.URL;
-import java.text.DateFormat;
+
 import java.text.DateFormatSymbols;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.time.Month;
+
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
+
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.MenuButton;
-import javafx.scene.input.MouseEvent;
+
+
 import javafx.scene.shape.Rectangle;
 
 import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
+
 import javafx.scene.Node;
+import javafx.scene.control.ContextMenu;
+import javafx.scene.control.ListView;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
-import static javafx.scene.layout.GridPane.getColumnIndex;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 
 /**
  * FXML Controller class
@@ -45,14 +47,123 @@ import javafx.scene.paint.Color;
 
 public class HomePageController implements Initializable {
     
+   
+    @FXML
+    private ComboBox year_list;
+    @FXML
+    private ComboBox month_list;
+    
+    ObservableList<String> list = FXCollections.observableArrayList("2017","2018");
+    ObservableList<String> list2 = FXCollections.observableArrayList("January","February","March","April","May","June","July","August","September","October","November","December");
+    // friendList_name load form database
+    ObservableList<String> friendList_name =FXCollections.observableArrayList ("ShinAh", "JaeHa","Sesshomaru", "Kaneki","Tatsuya", "Miyuki"); 
+    private Label month_label;
+    @FXML
+    private GridPane calendarPane;
+    private Label[] dayLabel = new Label[42];
+    private Rectangle[] dayBlock = new Rectangle[42];
+    int year = Calendar.getInstance().get(Calendar.YEAR);
+    int month;
+    int current_day;
+    int current_month;
+    int current_year;
+    String monthName;
+    @FXML
+    private Pane controlPane;
+    @FXML
+    private Circle mark_day;
+    @FXML
+    private Label dayLabel1;
+    @FXML
+    private Label dayLabel2;
+    @FXML
+    private Label dayLabel3;
+    @FXML
+    private Label dayLabel4;
+    @FXML
+    private Label dayLabel5;
+    @FXML
+    private Label dayLabel6;
+    @FXML
+    private Label dayLabel7;
+    @FXML
+    private Label dayLabel8;
+    @FXML
+    private Label dayLabel9;
+    @FXML
+    private Label dayLabel10;
+    @FXML
+    private Label dayLabel11;
+    @FXML
+    private Label dayLabel12;
+    @FXML
+    private Label dayLabel13;
+    @FXML
+    private Label dayLabel14;
+    @FXML
+    private Label dayLabel15;
+    @FXML
+    private Label dayLabel16;
+    @FXML
+    private Label dayLabel17;
+    @FXML
+    private Label dayLabel18;
+    @FXML
+    private Label dayLabel19;
+    @FXML
+    private Label dayLabel20;
+    @FXML
+    private Label dayLabel21;
+    @FXML
+    private Label dayLabel22;
+    @FXML
+    private Label dayLabel23;
+    @FXML
+    private Label dayLabel24;
+    @FXML
+    private Label dayLabel25;
+    @FXML
+    private Label dayLabel26;
+    @FXML
+    private Label dayLabel27;
+    @FXML
+    private Label dayLabel28;
+    @FXML
+    private Label dayLabel29;
+    @FXML
+    private Label dayLabel30;
+    @FXML
+    private Label dayLabel31;
+    @FXML
+    private Label dayLabel32;
+    @FXML
+    private Label dayLabel33;
+    @FXML
+    private Label dayLabel34;
+    @FXML
+    private Label dayLabel35;
+    @FXML
+    private Label dayLabel36;
+    @FXML
+    private Label dayLabel37;
+    @FXML
+    private Label dayLabel38;
+    @FXML
+    private Label dayLabel39;
+    @FXML
+    private Label dayLabel40;
+    @FXML
+    private Label dayLabel41;
+    @FXML
+    private Label dayLabel42;
+    @FXML
+    private Rectangle dayBlock4;
     @FXML
     private Rectangle dayBlock1;
     @FXML
     private Rectangle dayBlock2;
     @FXML
     private Rectangle dayBlock3;
-    @FXML
-    private Rectangle dayBlock4;
     @FXML
     private Rectangle dayBlock5;
     @FXML
@@ -129,221 +240,72 @@ public class HomePageController implements Initializable {
     private Rectangle dayBlock41;
     @FXML
     private Rectangle dayBlock42;
+    private Label labelToday;
     @FXML
-    private Label dayLabel1;
+    private Label label_Today;
     @FXML
-    private Label dayLabel2;
+    private Menu username_menu;
+    static public  Menu changeUsername;
     @FXML
-    private Label dayLabel3;
+    private Pane selectCal_Pane;
     @FXML
-    private Label dayLabel4;
+    private ListView<String> friend_list;
     @FXML
-    private Label dayLabel5;
+    private TextField idFriend_field;
     @FXML
-    private Label dayLabel6;
+    private Pane deleteFriend_pane;
     @FXML
-    private Label dayLabel7;
-    @FXML
-    private Label dayLabel8;
-    @FXML
-    private Label dayLabel9;
-    @FXML
-    private Label dayLabel10;
-    @FXML
-    private Label dayLabel11;
-    @FXML
-    private Label dayLabel12;
-    @FXML
-    private Label dayLabel13;
-    @FXML
-    private Label dayLabel14;
-    @FXML
-    private Label dayLabel15;
-    @FXML
-    private Label dayLabel16;
-    @FXML
-    private Label dayLabel17;
-    @FXML
-    private Label dayLabel18;
-    @FXML
-    private Label dayLabel19;
-    @FXML
-    private Label dayLabel20;
-    @FXML
-    private Label dayLabel21;
-    @FXML
-    private Label dayLabel22;
-    @FXML
-    private Label dayLabel23;
-    @FXML
-    private Label dayLabel24;
-    @FXML
-    private Label dayLabel25;
-    @FXML
-    private Label dayLabel26;
-    @FXML
-    private Label dayLabel27;
-    @FXML
-    private Label dayLabel28;
-    @FXML
-    private Label dayLabel29;
-    @FXML
-    private Label dayLabel30;
-    @FXML
-    private Label dayLabel31;
-    @FXML
-    private Label dayLabel32;
-    @FXML
-    private Label dayLabel33;
-    @FXML
-    private Label dayLabel34;
-    @FXML
-    private Label dayLabel35;
-    @FXML
-    private Label dayLabel36;
-    @FXML
-    private Label dayLabel38;
-    @FXML
-    private Label dayLabel37;
-    @FXML
-    private Label dayLabel39;
-    @FXML
-    private Label dayLabel40;
-    @FXML
-    private Label dayLabel41;
-    @FXML
-    private Label dayLabel42;
-    @FXML
-    private ComboBox year_list;
-    
-    int year = Calendar.getInstance().get(Calendar.YEAR);
-    private static int month;  
-    ObservableList<String> list = FXCollections.observableArrayList("2017","2018");
-    @FXML
-    private Button julBtn;
-    @FXML
-    private Label month_label;
-    @FXML
-    private Label month_label1;
-    @FXML
-    private Label month_label2;
-    @FXML
-    private GridPane calendarPane;
-    private Label[] dayLabel = new Label[42];
-    private Rectangle[] dayBlock = new Rectangle[42];
+    private Label nameDelete_label;
+    String select_Friendname;
+ 
     /**
      * Initializes the controller class.
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO    
-        Calendar c = Calendar.getInstance();
-        month = c.get(Calendar.MONTH);
-        String defaultMonth = new DateFormatSymbols().getMonths()[month];
-        generateCalendar(month,year);
-        month_label.setText(defaultMonth);
-         year_list.setItems(list);  
+    public void initialize(URL url, ResourceBundle rb) {  
+        year_list.setItems(list); 
+        month_list.setItems(list2); 
+        changeUsername =  username_menu;
+        setInit();      
+         
     }
     
-    
-
     @FXML
     private void list_Action(ActionEvent event) {
-        year = Integer.parseInt(year_list.getValue().toString());
-        generateCalendar(month,year);
-    }
-
-    @FXML
-    private void janBtn(ActionEvent event) {
-        month = 0;
-        month_label.setText("January");
-        generateCalendar(month,year);
-    }
-
-    @FXML
-    private void febBtn(ActionEvent event) {
-        month = 1;
-        month_label.setText("February");
-        generateCalendar(month,year);
-    }
-
-    @FXML
-    private void marBtn(ActionEvent event) {
-        month = 2;
-        month_label.setText("March"); 
-        generateCalendar(month,year);
-    }
-
-    @FXML
-    private void aprBtn(ActionEvent event) {
-        month = 3;
-        month_label.setText("April");
-        generateCalendar(month,year);
-    }
-
-    @FXML
-    private void mayBtn(ActionEvent event) {
-        month = 4;
-        month_label.setText("May");
-        generateCalendar(month,year);
-    }
-
-    @FXML
-    private void junBtn(ActionEvent event) {
-        month = 5;
-        month_label.setText("June");
-        generateCalendar(month,year);
-    }
-
-    @FXML
-    private void julBtn(ActionEvent event) {
-        month = 6;
-        month_label.setText("July");
+        year = Integer.parseInt(year_list.getValue().toString());    
         generateCalendar(month,year);
     }
     @FXML
-    private void augBtn(ActionEvent event) {
-        month = 7;
-        month_label.setText("August");
+    private void mlist_Action(ActionEvent event) {
+        
+        monthName = month_list.getValue().toString();
+        // month(String) --> month(Int)
+        month = Month.valueOf(monthName.toUpperCase()).getValue();
+        generateCalendar(--month,year);
+    }
+     
+   void setInit()
+   {  
+       //Set Friend List
+        friend_list.setItems(friendList_name);  
+       //Generate Calendar
+        Calendar c = Calendar.getInstance();
+        month = c.get(Calendar.MONTH);
+        current_day = c.get(Calendar.DATE);
+        year = c.get(Calendar.YEAR);
+        current_year = year;
+        current_month = month;
+        String defaultMonth = new DateFormatSymbols().getMonths()[month];
         generateCalendar(month,year);
-    }
-
-    @FXML
-    private void sepBtn(ActionEvent event) {
-        month = 8;
-        month_label.setText("September");
-        generateCalendar(month,year);
-    }
-
-    @FXML
-    private void octBtn(ActionEvent event) {
-        month = 9;
-        month_label.setText("October");
-        generateCalendar(month,year);
-    }
-
-    @FXML
-    private void novBtn(ActionEvent event) {
-        month = 10;
-        month_label.setText("November");
-        generateCalendar(month,year);
-    }
-
-    @FXML
-    private void decBtn(ActionEvent event) {
-        month = 11;
-        month_label.setText("December");
-        generateCalendar(month,year);
-    }
-
-    @FXML
-    private void signOut(MouseEvent event) {
-        SmartReminder.primaryStage.getScene().setRoot(SmartReminder.loginPage);
-    }
-
+        month_list.setValue(defaultMonth);
+        year_list.setValue(year);
+        String date = "Today is "+current_day+" / "+defaultMonth+" / "+year ;
+        label_Today.setText(date);
+   }
    void generateCalendar(int month,int year){
         int count_day = 1;
         int rectangle_loop = 1;
+      
          //month in Calendar class start at 0(0 = january) 
          Calendar c = Calendar.getInstance();
          c.set(year, month, 1);
@@ -377,9 +339,16 @@ public class HomePageController implements Initializable {
                     }
                     else if(count_day < daysInMonth+day_of_week)
                     {
-                        String x = child.getTypeSelector();
-                        System.out.println(x);
-                       dayBlock[count_day-1].setFill(Color.WHITE);
+                        if(day == current_day &&year==current_year && month+1 == current_month)
+                        {
+                           mark_day.setVisible(false);
+                           dayBlock[count_day-1].setFill(Color.CORAL);
+                        }  
+                        else
+                        {   if(year!=current_year||month+1!=current_month)
+                                mark_day.setVisible(false);
+                            dayBlock[count_day-1].setFill(Color.WHITE);
+                        }
                        dayLabel[count_day-1].setText(String.valueOf(day++));
                        day = (day-1==daysInMonth) ? 1 : day;
                     }
@@ -389,10 +358,54 @@ public class HomePageController implements Initializable {
                        dayLabel[count_day-1].setText(String.valueOf(day++));
                     }
                     count_day++;
-                    //System.out.println(child);
                 }
             }
         }
     }
-   
+
+    @FXML
+    private void signOut(ActionEvent event) {
+        setInit();
+        FillIdPasswordController.changeid_field.setText("");
+        FillIdPasswordController.changpassword_field.setText("");
+        SmartReminder.primaryStage.getScene().setRoot(SmartReminder.loginPage);
+       
+    }
+
+    @FXML
+    private void addFriend(ActionEvent event) {
+        String anotherUsername = idFriend_field.getText();
+        // check in database if have this id fill to friendList_name
+        friendList_name.add(anotherUsername);
+    }
+
+    @FXML
+    private void dubbleClickedFriendList(MouseEvent event) {
+        if(event.getClickCount() > 1){
+            select_Friendname = friend_list.getSelectionModel().getSelectedItem();
+            nameDelete_label.setText(select_Friendname); 
+            deleteFriend_pane.setVisible(true);
+        }
+    }
+
+    @FXML
+    private void deleteFriend(ActionEvent event) {
+        int count=0;
+        for(String name : friendList_name){
+            if(name.equals(select_Friendname))
+            {
+                friendList_name.remove(count);
+                friend_list.setItems(friendList_name);  
+                break;
+            }
+            count++;
+        }
+        deleteFriend_pane.setVisible(false);
+    }
+
+    @FXML
+    private void cancleDelete(ActionEvent event) {
+        deleteFriend_pane.setVisible(false);
+    }
+
 }
