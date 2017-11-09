@@ -39,6 +39,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import static smartreminder.FillIdPasswordController.username;
 
 /**
  * FXML Controller class
@@ -267,6 +268,7 @@ public class HomePageController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {  
+        //year_list.setItem()
         year_list.setItems(list); 
         month_list.setItems(list2); 
         changeUsername =  username_menu;
@@ -308,6 +310,7 @@ public class HomePageController implements Initializable {
         label_Today.setText(date);
    }
    void generateCalendar(int month,int year){
+       
         int count_day = 1;
         int rectangle_loop = 1;
       
@@ -438,6 +441,12 @@ public class HomePageController implements Initializable {
     @FXML
     private void groupMenu(ActionEvent event) {
         setPane(SmartReminder.groupPage); 
+    }
+
+    @FXML
+    private void onclickCalendar(MouseEvent event) {
+     
+        SmartReminder.primaryStage.getScene().setRoot(SmartReminder.addSchedulePage);
     }
 
 }

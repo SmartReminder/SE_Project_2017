@@ -85,7 +85,7 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ade0e4" height="78.0" stroke="#b2aeae" strokeType="INSIDE" width="115.0" GridPane.columnIndex="4" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ade0e4" height="78.0" stroke="#b2aeae" strokeType="INSIDE" width="115.0" GridPane.columnIndex="5" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ade0e4" height="78.0" stroke="#b2aeae" strokeType="INSIDE" width="115.0" GridPane.columnIndex="6" />
-            <Rectangle fx:id="dayBlock1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="94.0" stroke="#b2aeae" strokeType="INSIDE" width="115.0" GridPane.rowIndex="1" />
+            <Rectangle fx:id="dayBlock1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="94.0" onMouseClicked="#onclickCalendar" stroke="#b2aeae" strokeType="INSIDE" width="115.0" GridPane.rowIndex="1" />
             <Rectangle fx:id="dayBlock2" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="94.0" stroke="#b2aeae" strokeType="INSIDE" width="115.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Rectangle fx:id="dayBlock3" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="94.0" stroke="#b2aeae" strokeType="INSIDE" width="115.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
             <Rectangle fx:id="dayBlock4" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="94.0" stroke="#b2aeae" strokeType="INSIDE" width="115.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
