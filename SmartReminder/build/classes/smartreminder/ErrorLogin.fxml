@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="560.0" prefWidth="560.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="smartreminder.ErrorLoginController">
+   <children>
+      <Pane layoutY="7.0" prefHeight="560.0" prefWidth="560.0">
+         <children>
+            <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#f2aeae" height="481.0" layoutX="13.0" layoutY="40.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="3.0" width="526.0" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="201.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/incorrect.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="183.0" layoutY="432.0" mnemonicParsing="false" onAction="#btnBack" prefHeight="46.0" prefWidth="187.0" text="Back">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="128.0" layoutY="50.0" prefHeight="104.0" prefWidth="304.0" text=" Login Failed" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT" size="55.0" />
+               </font>
+            </Label>
+            <Label layoutX="108.0" layoutY="94.0" prefHeight="20.0" prefWidth="361.0" text="____________" textFill="WHITE">
+               <font>
+                  <Font name="Tw Cen MT" size="55.0" />
+               </font>
+            </Label>
+            <Label layoutX="86.0" layoutY="307.0" prefHeight="93.0" prefWidth="406.0" text="Incorrect username or password !!" textFill="#c32525">
+               <font>
+                  <Font name="Tw Cen MT" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
