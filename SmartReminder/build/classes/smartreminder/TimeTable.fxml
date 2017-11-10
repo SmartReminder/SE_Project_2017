@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="1414.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smartreminder.TimeTableController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#faffcfb3" height="1414.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1200.0" />
+      <GridPane layoutY="2.0" prefHeight="3000.0" prefWidth="1200.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.0" minWidth="0.0" prefWidth="201.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1000.0" minWidth="10.0" prefWidth="900.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#faf6a5c1" height="65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="208.0" GridPane.rowIndex="3" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#faf6a5c1" height="65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="208.0" GridPane.rowIndex="5" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#faf6a5c1" height="65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="208.0" GridPane.rowIndex="7" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#faf6a5c1" height="65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="208.0" GridPane.rowIndex="1" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="208.0" text="00.00 - 00.30" textAlignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="0.0" prefWidth="207.0" text="00.30 - 01.00" textAlignment="CENTER" GridPane.rowIndex="1" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="208.0" text="01.00 - 01.30" textAlignment="CENTER" GridPane.rowIndex="2" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="208.0" text="01.30 - 02.00" textAlignment="CENTER" GridPane.rowIndex="3" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="210.0" text="02.00 - 02.30" textAlignment="CENTER" GridPane.rowIndex="4" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="209.0" text="02.30 - 03.00" textAlignment="CENTER" GridPane.rowIndex="5" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="209.0" text="03.00 - 03.30" textAlignment="CENTER" GridPane.rowIndex="6" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="209.0" text="03.30 - 04.00" textAlignment="CENTER" GridPane.rowIndex="7" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="209.0" text="04.00 - 04.30" textAlignment="CENTER" GridPane.rowIndex="8" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="211.0" text="04.30 - 05.00" textAlignment="CENTER" GridPane.rowIndex="9" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="210.0" text="05.00 - 05.30" textAlignment="CENTER" GridPane.rowIndex="10" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="209.0" text="05.30 - 06.00" textAlignment="CENTER" GridPane.rowIndex="11" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="207.0" text="06.00 - 06.30" textAlignment="CENTER" GridPane.rowIndex="12" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="221.0" text="13.00 - 13.30" textAlignment="CENTER" GridPane.rowIndex="26" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="208.0" text="06.30 - 07.00" textAlignment="CENTER" GridPane.rowIndex="13" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="214.0" text="07.00 - 07.30" textAlignment="CENTER" GridPane.rowIndex="14" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="213.0" text="07.30 - 08.00" textAlignment="CENTER" GridPane.rowIndex="15" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="210.0" text="08.00 - 08.30" textAlignment="CENTER" GridPane.rowIndex="16" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="217.0" text="08.30 - 09.00" textAlignment="CENTER" GridPane.rowIndex="17" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="209.0" text="09.00 - 09.30" textAlignment="CENTER" GridPane.rowIndex="18" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="207.0" text="09.30 - 10.00" textAlignment="CENTER" GridPane.rowIndex="19" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="236.0" text="10.00 - 10.30" textAlignment="CENTER" GridPane.rowIndex="20" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="232.0" text="10.30 - 11.00" textAlignment="CENTER" GridPane.rowIndex="21" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="211.0" text="11.00 - 11.30" textAlignment="CENTER" GridPane.rowIndex="22" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="208.0" text="11.30 - 12.00" textAlignment="CENTER" GridPane.rowIndex="23" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="209.0" text="12.30 - 13.00" textAlignment="CENTER" GridPane.rowIndex="25" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="209.0" text="12.00 - 12.30" textAlignment="CENTER" GridPane.rowIndex="24" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="215.0" text="13.30 - 14.00" textAlignment="CENTER" GridPane.rowIndex="27" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="230.0" text="14.00 - 14.30" textAlignment="CENTER" GridPane.rowIndex="28" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="213.0" text="14.30 -15.00" textAlignment="CENTER" GridPane.rowIndex="29" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="211.0" text="17.00 - 17.30" textAlignment="CENTER" GridPane.rowIndex="34" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="211.0" text="15.00 -15.30" textAlignment="CENTER" GridPane.rowIndex="30" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="225.0" text="16.30 - 17.00" textAlignment="CENTER" GridPane.rowIndex="33" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="211.0" text="18.00 - 18.30" textAlignment="CENTER" GridPane.rowIndex="36" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="228.0" text="18.30 - 19.00" textAlignment="CENTER" GridPane.rowIndex="37" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="218.0" text="19.00 - 19.30" textAlignment="CENTER" GridPane.rowIndex="38" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="214.0" text="19.30 - 20.00" textAlignment="CENTER" GridPane.rowIndex="39" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="212.0" text="20.00 - 20.30" textAlignment="CENTER" GridPane.rowIndex="40" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="209.0" text="20.30 - 21.00" textAlignment="CENTER" GridPane.rowIndex="41" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="211.0" text="22.30 - 23.00" textAlignment="CENTER" GridPane.rowIndex="45" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="222.0" text="17.30 - 18.00" textAlignment="CENTER" GridPane.rowIndex="35" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="208.0" text="23.00 - 23.30" textAlignment="CENTER" GridPane.rowIndex="46" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="211.0" text="23.30 - 00.00" textAlignment="CENTER" GridPane.rowIndex="47" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="209.0" text="21.30 - 22.00" textAlignment="CENTER" GridPane.rowIndex="43" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="216.0" text="22.00 - 22.30" textAlignment="CENTER" GridPane.rowIndex="44" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="209.0" text="21.00 - 21.30" textAlignment="CENTER" GridPane.rowIndex="42" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#faf6a5c1" height="68.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="999.0" GridPane.columnIndex="1" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#faf6a5c1" height="65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="999.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#faf6a5c1" height="65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="999.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#faf6a5c1" height="65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="999.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#faf6a5c1" height="65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="999.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="211.0" text="15.30 -16.00" textAlignment="CENTER" GridPane.rowIndex="31" />
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="211.0" text="16.00 -16.30" textAlignment="CENTER" GridPane.rowIndex="32" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

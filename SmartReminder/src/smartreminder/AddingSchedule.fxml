@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smartreminder.AddingScheduleController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1fffd7" height="82.0" stroke="#f5f5f5" strokeType="INSIDE" width="1200.0" />
+      <Text fill="WHITE" layoutX="509.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD SCHEDULE">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e9ff0a36" height="671.0" layoutY="82.0" stroke="BLACK" strokeType="INSIDE" width="1200.0" />
+      <TextField fx:id="detail" layoutX="340.0" layoutY="224.0" prefHeight="89.0" prefWidth="545.0" promptText="DETAILS">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="scheduleName" layoutX="340.0" layoutY="143.0" prefHeight="49.0" prefWidth="545.0" promptText="SCHEDULE NAME">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button layoutX="559.0" layoutY="549.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="107.0" style="-fx-background-color: #66cdaa;" text="ADD" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Button>
+      <ComboBox layoutX="340.0" layoutY="389.0" prefHeight="25.0" prefWidth="137.0" promptText="Start Time" />
+      <ComboBox layoutX="544.0" layoutY="389.0" prefHeight="25.0" prefWidth="137.0" promptText="Finish" />
+      <ComboBox layoutX="748.0" layoutY="389.0" prefHeight="25.0" prefWidth="137.0" promptText="Pre-Alarm" />
+      <CheckBox layoutX="572.0" layoutY="478.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="100.0" text="Repeat">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </CheckBox>
+   </children>
+</AnchorPane>
