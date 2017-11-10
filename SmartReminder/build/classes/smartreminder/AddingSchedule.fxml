@@ -22,23 +22,38 @@
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="scheduleName" layoutX="340.0" layoutY="143.0" prefHeight="49.0" prefWidth="545.0" promptText="SCHEDULE NAME">
+      <TextField fx:id="scheduleName" layoutX="340.0" layoutY="143.0" onAction="#Clicking" prefHeight="49.0" prefWidth="545.0" promptText="SCHEDULE NAME">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <Button layoutX="559.0" layoutY="549.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="107.0" style="-fx-background-color: #66cdaa;" text="ADD" textFill="#f8f8f8">
+      <Button fx:id="save" layoutX="670.0" layoutY="651.0" mnemonicParsing="false" onAction="#Clicking" prefHeight="49.0" prefWidth="107.0" style="-fx-background-color: #66cdaa;" text="SAVE" textFill="#f8f8f8">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
       </Button>
-      <ComboBox layoutX="340.0" layoutY="389.0" prefHeight="25.0" prefWidth="137.0" promptText="Start Time" />
-      <ComboBox layoutX="544.0" layoutY="389.0" prefHeight="25.0" prefWidth="137.0" promptText="Finish" />
-      <ComboBox layoutX="748.0" layoutY="389.0" prefHeight="25.0" prefWidth="137.0" promptText="Pre-Alarm" />
-      <CheckBox layoutX="572.0" layoutY="478.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="100.0" text="Repeat">
+      <ComboBox fx:id="preAlarmList" layoutX="372.0" layoutY="527.0" onAction="#preAlarming" prefHeight="25.0" prefWidth="137.0" promptText="Pre-Alarm" />
+      <CheckBox fx:id="checkRepeat" layoutX="736.0" layoutY="515.0" mnemonicParsing="false" onAction="#checkBoxOnClick" prefHeight="49.0" prefWidth="100.0" text="Repeat">
          <font>
             <Font size="18.0" />
          </font>
       </CheckBox>
+      <ListView fx:id="startTime" layoutX="340.0" layoutY="366.0" onMouseClicked="#SelectStartTime" prefHeight="89.0" prefWidth="200.0" />
+      <ListView fx:id="finishTime" layoutX="686.0" layoutY="366.0" onMouseClicked="#SelectFinishTime" prefHeight="89.0" prefWidth="200.0" />
+      <Button layoutX="487.0" layoutY="651.0" mnemonicParsing="false" onAction="#backOnclick" prefHeight="49.0" prefWidth="107.0" style="-fx-background-color: #66cdaa;" text="BACK" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Button>
+      <Label layoutX="387.0" layoutY="333.0" prefHeight="27.0" prefWidth="107.0" text="START TIME" textFill="#1beb94">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="732.0" layoutY="333.0" prefHeight="27.0" prefWidth="107.0" text="FINISH TIME" textFill="#1beb94">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

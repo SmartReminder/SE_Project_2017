@@ -23,15 +23,21 @@
           <AnchorPane fx:id="timeTable_pane" minHeight="0.0" minWidth="0.0" prefHeight="3000.0" prefWidth="1196.0" />
         </content>
       </ScrollPane>
-      <Button layoutX="1061.0" layoutY="21.0" mnemonicParsing="false" onAction="#adding" prefHeight="36.0" prefWidth="121.0" text="Add">
+      <Button layoutX="1061.0" layoutY="21.0" mnemonicParsing="false" onAction="#adding" prefHeight="36.0" prefWidth="121.0" style="-fx-background-color: #ffffff;" text="ADD" textFill="#4dcbf2">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
       </Button>
-      <Button layoutX="21.0" layoutY="21.0" mnemonicParsing="false" onAction="#backBtn" prefHeight="36.0" prefWidth="121.0" text="Back">
+      <Button layoutX="21.0" layoutY="21.0" mnemonicParsing="false" onAction="#backBtn" prefHeight="36.0" prefWidth="121.0" style="-fx-background-color: #ffffff;" text="BACK" textFill="#5bd3f2">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
       </Button>
    </children>
 </AnchorPane>
