@@ -76,6 +76,7 @@ public class AddingScheduleController implements Initializable {
         System.out.println(select_finishTime);
         System.out.println(select_pre);   
         System.out.println(checkRepeatValue);  
+        SmartReminder.primaryStage.getScene().setRoot(SmartReminder.addSchedulePage);
         
     }
 
@@ -86,7 +87,7 @@ public class AddingScheduleController implements Initializable {
 
     @FXML
     private void backOnclick(ActionEvent event) {
-         SmartReminder.primaryStage.getScene().setRoot(SmartReminder.addingSchedulePage);
+         SmartReminder.primaryStage.getScene().setRoot(SmartReminder.addSchedulePage);
     }
 
     @FXML
