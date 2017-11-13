@@ -18,6 +18,37 @@
          </font>
       </Text>
       <ListView layoutX="-2.0" layoutY="76.0" prefHeight="675.0" prefWidth="1206.0" />
+      <ScrollPane layoutY="76.0" prefHeight="714.0" prefWidth="1204.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="714.0" prefWidth="1196.0">
+               <children>
+                  <GridPane layoutX="7.0" prefHeight="751.0" prefWidth="1204.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="101.0" minWidth="0.0" prefWidth="101.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1000.0" minWidth="10.0" prefWidth="1000.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="0.0" prefWidth="0.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
       <ImageView fx:id="imageAdd" fitHeight="71.0" fitWidth="93.0" layoutY="3.0" onMouseClicked="#adding" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Image/sign-add-icon.png" />
@@ -29,6 +60,6 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#21ff39a1" height="77.0" layoutY="147.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1204.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#22ff21a1" height="77.0" layoutY="292.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1204.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#22ff21a1" height="77.0" layoutY="438.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1204.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#22ff21a1" height="77.0" layoutY="579.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1204.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#22ff21a1" height="77.0" layoutX="-1.0" layoutY="583.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1204.0" />
    </children>
 </AnchorPane>

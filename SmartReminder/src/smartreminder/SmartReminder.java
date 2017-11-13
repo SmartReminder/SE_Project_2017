@@ -11,6 +11,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import classes.UserAccount;
+import javax.persistence.*;
 
 /**
  *
@@ -28,12 +30,30 @@ public class SmartReminder extends Application {
     public static Parent addingSchedulePage;
     public static Parent timeTablePage;
     
-    
     public static Stage primaryStage;
     public static Pane primaryPane;
     public static Pane secondaryPane;
+    
+    public static EntityManagerFactory emf = Persistence.createEntityManagerFactory("./db/database.odb");
+    
     @Override
     public void start(Stage stage) throws Exception {
+        
+        /*UserAccount tmpUser = new UserAccount("testid", "testpass", "095-852-9865");
+        
+        EntityManager em = emf.createEntityManager();
+ 
+        // Store 1000 Point objects in the database:
+        em.getTransaction().begin();
+        
+        em.persist(tmpUser);
+                
+        em.getTransaction().commit();
+        
+        // Close the database connection:
+        em.close();
+        emf.close();*/
+        
         primaryStage = stage;
         loginPage = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
         profilePage = FXMLLoader.load(getClass().getResource("ProfilePage.fxml"));

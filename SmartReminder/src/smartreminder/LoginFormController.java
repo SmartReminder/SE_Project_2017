@@ -13,6 +13,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
+import classes.UserAccount;
+import java.util.List;
+import javax.persistence.*;
 
 /**
  * FXML Controller class
@@ -29,12 +32,24 @@ public class LoginFormController implements Initializable {
     @FXML
     private PasswordField password_field;
 
+    List<UserAccount> users;
+    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        EntityManager em = SmartReminder.emf.createEntityManager();
+ 
+        // Store 1000 Point objects in the database:
+        em.getTransaction().begin();
+        
+        TypedQuery<UserAccount> query = em.createQuery("SELECT user FROM UserAccount user", UserAccount.class);
+        users = query.getResultList();
+        
+        em.close();
+        SmartReminder.emf.close();
     }    
 
     @FXML
